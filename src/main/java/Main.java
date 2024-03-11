@@ -41,24 +41,23 @@ public class Main {
         System.out.println("Você selecionou a opção 1: Conferir sua média.");
         System.out.println("Insira a sua primeira nota:");
 
-        int gradeOne;
-        int gradeTwo;
-        int gradeThree;
+        int grades[] = new int[2];
+        ;
 
         Scanner gradeInformedOne = new Scanner(System.in);
-        gradeOne = gradeInformedOne.nextInt();
+        grades[0] = gradeInformedOne.nextInt();
 
         System.out.println("Insira a sua segunda nota:");
 
         Scanner gradeInformedTwo = new Scanner(System.in);
-        gradeTwo = gradeInformedTwo.nextInt();
+        grades[1] = gradeInformedTwo.nextInt();
 
         System.out.println("Insira a sua terceira nota:");
 
         Scanner gradeInformedThree = new Scanner(System.in);
-        gradeThree = gradeInformedThree.nextInt();
+        grades[2] = gradeInformedThree.nextInt();
 
-        int average = (gradeOne + gradeTwo + gradeThree) / 3;
+        int average = (grades[0] + grades[1] + grades[2]) / 3;
 
         if (average >= 7) {
           System.out.println("Sua média foi de " + average + " e você foi aprovado!");
